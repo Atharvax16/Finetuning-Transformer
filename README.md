@@ -4,3 +4,8 @@ Learning how to finetune transformer and hsaring what all things i learned
 
 Self Attention MEchanism's
 <img width="1298" height="640" alt="image" src="https://github.com/user-attachments/assets/65d4024b-5e88-4d13-98f9-c1b4df5799f0" />
+
+
+<img width="1372" height="552" alt="image" src="https://github.com/user-attachments/assets/87a2fca3-e7bd-4529-a625-1bbf6218dad2" />
+<img width="950" height="664" alt="image" src="https://github.com/user-attachments/assets/3d9612f5-c769-40a8-a4a8-570bf3083243" />
+
