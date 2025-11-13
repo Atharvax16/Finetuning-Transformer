@@ -1,0 +1,14 @@
+Example:
+"Sarah went to a restaurant to meet her friend that night"
+
+Over here the word "sarah" relates to other words in diffrent ways:
+What did sarah do?to meet
+where did sarah go?to restaurant 
+who did sarah meet?her friend
+when did the sarah go?at night 
+
+Self-Attention focuses on only one aspect of the sentence, but there is many others therefore we need to have separate self-attentions for each aspect,that lead to multi-head self Attention mechanism where each head focus on one such aspect.
+One head may focus on the relationship between “Sarah” and “her friend,” learning about who is meeting whom.​
+Another head might pay attention to “restaurant” and “night,” helping the model capture the time and location context.​
+Another head could attend to “went” and “restaurant” to understand the action and destination pairing.
+
