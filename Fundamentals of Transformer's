@@ -1,0 +1,26 @@
+What is Transformer?
+It's basically an encoder-decoder architecture used for parallel_processing and self attention mechanisms
+
+Encoder->
+Multi-head Attention->Add & Norm->Feed Forward->Add & Norm
+
+Decoder->
+Masked multi-head Attention->add & norm ->multi-head Attention->add& norm feed forward ->add & norm --> linear ->Softmax
+
+Subword Tokenization
+NLP -> Text ->for making embedding ->tokenization each word understanding the root word
+It will contains a vocab of words,embedding will be present and if the word comes out from the vocab then how does it deals?
+For ex:Tokenization
+It has embeddings of of['To' and 'Zation'] and it doesn't have ['keni'] so what it will do is that it will mark the word as "Out of Embedding" and process further
+
+Drawbacks of RNN's:
+1.)Parallel Processing
+2.)Information loss overtime
+3.)Not able to capture longer contexts
+
+1.It uses sequential processsing,therefore if we want some information at xi then we need to process all the word then achieve it
+
+2.In embedding the information of each token is maintained at seaparte location,but in LSTM&GRU there is information mocking oro overlappign in the hidden states
+
+3.It only contains sequential context therefore it knows the how  x0-x1 both are connected x0 might not know the connection with x3 or x4 
+
