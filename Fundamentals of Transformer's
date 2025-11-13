@@ -22,6 +22,7 @@ Drawbacks of RNN's:
 
 2.In embedding the information of each token is maintained at seaparte location,but in LSTM&GRU there is information mocking oro overlappign in the hidden states
 
+
 3.It only contains sequential context therefore it knows the how  x0-x1 both are connected x0 might not know the connection with x3 or x4 
 
 How Self Attention Mechanism works:
@@ -29,3 +30,14 @@ How Self Attention Mechanism works:
 2.)Using the dot product,it finds out the attention score's basically similarity 
 3.)softmax activation functions is being applied 
 4.)Attention weight is found in the form of matrix then using linear combinations
+
+MORE ON SELF ATTENTION:
+1.)The initial embedding(input X) for each token is multiplied by three diffrent metrics  to create query(Q),Key(K),Value(V)
+2.)The attention Scores are then calculated using the dot product of queries and keys.
+3.)the attention weights are then applied to get the final outputs
+4.)The attention weights are calculated by passing the scores through a softmax function (often after scaling by  square root of Dk where it is the key/query vector dimensionality), yielding normalized weights.
+5.)These attention weights are then used to compute a weighted sum (linear combination) of the value vectors, resulting in the final output for each position.
+
+
+
+
