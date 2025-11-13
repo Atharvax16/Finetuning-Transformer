@@ -24,3 +24,8 @@ Drawbacks of RNN's:
 
 3.It only contains sequential context therefore it knows the how  x0-x1 both are connected x0 might not know the connection with x3 or x4 
 
+How Self Attention Mechanism works:
+1.)Take's the X input embedding in the form of matrix and formt he transpose of it
+2.)Using the dot product,it finds out the attention score's basically similarity 
+3.)softmax activation functions is being applied 
+4.)Attention weight is found in the form of matrix then using linear combinations
