@@ -1,0 +1,18 @@
+Source/Input Embeddings --->  O ---> Multi-Head Self Attention ---> FeedForward Neural Networks(Applied pointwise)
+                              |
+                     Positional Embeddings
+
+Positional embeddings are the vectors added to token embeddings in Transformer models to indicate the position of each token in a sequence.They are essential becuase transformers process all tokens in paralle and dont inherently encode word order,unline RNN
+For every token in an input sequence (e.g., "Sarah", "went", ...), an embedding representing its position (such as first, second, third, etc.) is generated
+
+OF transformer model has a stack of six Encoder blocks
+because of six blocks we face two problems
+
+Why Normalization?
+-->operates on the activations of a neural network to ensure their values have a mean of zero and a standard deviation of one across the features for each sample
+what if we didnt use?
+-->Models will likely suffer from interval covariate shift,exploding/vanishing gradients,decreased genralization and slower convergence
+
+Why layer Normalization?
+-->It normalizes acroos the features of each individual sample not across the batch like batch ormalization.
+
