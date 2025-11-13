@@ -12,3 +12,19 @@ One head may focus on the relationship between “Sarah” and “her friend,”
 Another head might pay attention to “restaurant” and “night,” helping the model capture the time and location context.​
 Another head could attend to “went” and “restaurant” to understand the action and destination pairing.
 
+1.)The input embeddings (from tokenization) are passed to each head in parallel.
+2.)For example, "Sarah" and "friend" are processed by different attention heads, each projecting the inputs into separate query, key, and value spaces using distinct weight matrices.​
+3.)Each head calculates attention scores for every token pair using the dot product of the query (Q) and key (K) vectors for those tokens.​
+4.)These scores are passed through a softmax function, converting them to attention weights.
+5.)The attention weights are then used to compute a weighted sum (linear combination) of the value (V) vectors, producing the output for each token and head.​
+6.)Outputs from all heads are concatenated and further processed, enabling the model to learn complex, parallel relationships among tokens.
+
+Dimensions -> It refers to the size of the vectors at different stages in the model.
+1.Embedding Dimension
+This is the size of the input vectors after tokenization and embedding lookup.
+For example, if the embedding dimension is 512, each token is represented by a 512-dimensional vector
+2.Head Dimension
+In multi-head attention, the embedding dimension is split across several heads.
+For H heads, each head works with vectors of size
+3.Query Key,Value Dimension
+4.Output Dimension
