@@ -16,3 +16,16 @@ what if we didnt use?
 Why layer Normalization?
 -->It normalizes acroos the features of each individual sample not across the batch like batch ormalization.
 
+Skip Connections?
+(residual connection) in neural networks is a shortcut pathway that directly adds the input of a layer (or block) to its output, bypassing one or more intermediate layers.​
+
+Layer i ----> Layer j ----> Layer k
+          |              |
+          x              J(x)+x
+
+Benefits:
+1.)Gradient Flow
+2.)Identity mapping
+3.) Faster and More stable  Training 
+For Ex:
+If the input to a block is x and the output is F(x),the skip connetions 
