@@ -23,3 +23,13 @@ The logits go through a softmax layer to become probabilities — so you can int
 6.Training Fine-tunes the model
 The [CLS] token’s embeddings and the linear layer’s weights are both updated during fine-tuning on your data, so the model learns what aspects of [CLS] are useful for prediction on your specific problem
 
+OUTPUT --->
+tensor([[0.4855, 0.5145]], grad_fn=<SoftmaxBackward0>)
+tensor([1])
+
+0.4855: Probability the input is class 0 (e.g., negative)
+0.5145: Probability the input is class 1 (e.g., positive)
+
+the second tensor ([1]) is the predicted class index,meaning the model predicts class 1(positive) beacuse it has the higher probability.
+
+
