@@ -1,0 +1,25 @@
+Problem:Sequence Classification (Sentiment Analysis)
+
+You want to take a text and predict a class label-positive/negative
+Accepting variable-length text inputs
+
+1.Tokenization and Special Tokens
+the text is first spilt into tokens
+the [CLS] token si added at the beginning:[SEP] marks sentence boundaries.used by BERT,etc
+
+2.Encoding with a pretrained Model
+The input tokens are turnes into numbers and passed to a transformer model like BERT-already pretrained on lots of language data
+
+3.[CLS] Embedding as Sequence Summary
+As the model processes the input through multiple self-attention layers(Query,key,value),the [CLS] token mixes information from all parts of the text,using self-attention,and its final embedding acts as a compressed summary of the whole input.
+
+4.Linear Layer Maps to Logits 
+The final [CLS] embedding is passed through a linear layer-this layer has weights and biases it learns during your tasks training
+The output is a vector of logits (one per class; e.g., 2 for "positive" and "negative") — these are unnormalized prediction scores
+
+5.Softmax for probabilities
+The logits go through a softmax layer to become probabilities — so you can interpret the model's output as confidence numbers for each class
+
+6.Training Fine-tunes the model
+The [CLS] token’s embeddings and the linear layer’s weights are both updated during fine-tuning on your data, so the model learns what aspects of [CLS] are useful for prediction on your specific problem
+
