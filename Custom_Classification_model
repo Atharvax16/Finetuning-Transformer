@@ -32,4 +32,7 @@ tensor([1])
 
 the second tensor ([1]) is the predicted class index,meaning the model predicts class 1(positive) beacuse it has the higher probability.
 
-
+AutoModel vs AutoModelForCasualLM
+-->Loads ONLY the bare,pretrained transformer model without any specialized output layers or heads'for a downstream task
+and 
+Other loads a pretrained trnasformer and adds a task-specific head for casual laguage modelling(i.e next token prediction)
